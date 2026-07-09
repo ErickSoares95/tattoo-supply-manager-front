@@ -24,6 +24,11 @@ export function Navbar() {
             <Link to="/orders" className="text-zinc-300 hover:text-zinc-100">
               Meus pedidos
             </Link>
+            {user?.userType === 'ADMIN' && (
+              <Link to="/admin" className="text-red-400 hover:text-red-300">
+                Admin
+              </Link>
+            )}
             <span className="hidden text-zinc-500 sm:inline">{user?.fullName}</span>
             <button
               onClick={handleLogout}

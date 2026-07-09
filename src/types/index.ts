@@ -9,6 +9,7 @@ export interface UserResponse {
   userStatus: UserStatus;
   userType: UserType;
   phoneNumber: string | null;
+  cpf: string | null;
   imageUrl: string | null;
   creationDate: string;
 }
@@ -44,6 +45,23 @@ export interface ProductResponse {
   stock: number;
 }
 
+export interface ProductPayload {
+  name: string;
+  description: string;
+  price: number;
+  stock: number;
+}
+
+export interface UpdateUserRequest {
+  username: string;
+  fullName: string;
+  phoneNumber: string | null;
+  cpf: string | null;
+  imageUrl: string | null;
+  userType: UserType;
+  userStatus: UserStatus;
+}
+
 export interface OrderItemRequest {
   productId: number;
   quantity: number;
@@ -55,6 +73,7 @@ export interface OrderRequest {
 
 export interface OrderItemResponse {
   productId: number;
+  productName: string;
   quantity: number;
   price: number;
   subtotal: number;

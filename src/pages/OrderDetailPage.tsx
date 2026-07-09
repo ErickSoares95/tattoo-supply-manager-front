@@ -46,7 +46,7 @@ export default function OrderDetailPage() {
                   className="flex items-center justify-between border-b border-zinc-800 py-2 text-sm"
                 >
                   <span className="text-zinc-300">
-                    {item.quantity}x produto #{item.productId}
+                    {item.quantity}x {item.productName}
                   </span>
                   <span className="text-zinc-100">
                     {item.subtotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
