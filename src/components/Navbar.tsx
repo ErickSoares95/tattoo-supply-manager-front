@@ -29,6 +29,9 @@ export function Navbar() {
                 Admin
               </Link>
             )}
+            <Link to="/account/password" className="text-zinc-300 hover:text-zinc-100">
+              Alterar senha
+            </Link>
             <span className="hidden text-zinc-500 sm:inline">{user?.fullName}</span>
             <button
               onClick={handleLogout}

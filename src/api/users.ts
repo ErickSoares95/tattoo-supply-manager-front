@@ -1,5 +1,5 @@
 import { apiClient } from './client';
-import type { Page, UpdateUserRequest, UserResponse } from '../types';
+import type { ChangePasswordRequest, Page, UpdateUserRequest, UserResponse } from '../types';
 
 export async function listUsers(page = 0, size = 20): Promise<Page<UserResponse>> {
   const { data } = await apiClient.get<Page<UserResponse>>('/users', {
@@ -20,4 +20,8 @@ export async function updateUser(id: number, payload: UpdateUserRequest): Promis
 
 export async function deleteUser(id: number): Promise<void> {
   await apiClient.delete(`/users/${id}`);
+}
+
+export async function changePassword(payload: ChangePasswordRequest): Promise<void> {
+  await apiClient.patch('/users/me/password', payload);
 }

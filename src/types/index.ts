@@ -52,6 +52,11 @@ export interface ProductPayload {
   stock: number;
 }
 
+export interface ChangePasswordRequest {
+  currentPassword: string;
+  newPassword: string;
+}
+
 export interface UpdateUserRequest {
   username: string;
   fullName: string;

@@ -7,6 +7,7 @@ import RegisterPage from './pages/RegisterPage';
 import ProductsPage from './pages/ProductsPage';
 import OrdersPage from './pages/OrdersPage';
 import OrderDetailPage from './pages/OrderDetailPage';
+import ChangePasswordPage from './pages/ChangePasswordPage';
 import AdminHomePage from './pages/admin/AdminHomePage';
 import AdminProductsPage from './pages/admin/AdminProductsPage';
 import AdminProductFormPage from './pages/admin/AdminProductFormPage';
@@ -26,6 +27,7 @@ export default function App() {
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/orders" element={<OrdersPage />} />
             <Route path="/orders/:id" element={<OrderDetailPage />} />
+            <Route path="/account/password" element={<ChangePasswordPage />} />
 
             <Route element={<RequireAdmin />}>
               <Route path="/admin" element={<AdminHomePage />} />
